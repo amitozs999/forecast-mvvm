@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navcontroller:NavController
 
 
-
+  //http://api.weatherstack.com/current?access_key=&query=london
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         return NavigationUI.navigateUp(navcontroller,null)
 
     }
+
 
 }
 
