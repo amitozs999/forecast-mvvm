@@ -1,10 +1,10 @@
-package com.weather.forecastmvvm.data
+package com.weather.forecastmvvm.data.db.entitity
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Current(
-    val cloudcover: Int,
+data class CurrentWeatherEntry(
+
     val feelslike: Int,
     val humidity: Int,
     @SerializedName("is_day")

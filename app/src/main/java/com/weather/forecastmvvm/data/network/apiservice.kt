@@ -1,6 +1,7 @@
-package com.weather.forecastmvvm.data
+package com.weather.forecastmvvm.data.network
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import com.weather.forecastmvvm.data.network.response.currentWeatherResponse
 import kotlinx.coroutines.Deferred
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -9,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-const val API_KEY = ""
+const val API_KEY = "3aa5003c4b9b43568e14ef67ccf4d211"
 
 //http://api.weatherstack.com/current?access_key=&query=london
 
@@ -20,7 +21,7 @@ interface apiservice {
 
         @Query("query") location:String
 
-    ): Deferred<todayWeatherResponse>
+    ): Deferred<currentWeatherResponse>
     companion object {
         operator fun invoke(): apiservice {
 
