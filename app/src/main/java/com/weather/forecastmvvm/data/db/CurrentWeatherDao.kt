@@ -19,7 +19,8 @@ interface CurrentWeatherDao {
 
     @Query("select * from current_weather where id = $CURRENT_WEATHER_ID")
     fun getWeatherMetric(): LiveData<MetricWeatherEntry>
-
+//
     @Query("select * from current_weather where id = $CURRENT_WEATHER_ID")
     fun getWeatherImperial(): LiveData<ImperialWeatherEntry>
+//
 }
