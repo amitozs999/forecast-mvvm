@@ -12,12 +12,18 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.time.ZonedDateTime
+import org.threeten.bp.DayOfWeek;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.LocalTime
+import org.threeten.bp.ZoneId;
+import org.threeten.bp.temporal.TemporalAdjusters;
 import java.util.*
 
 
 class ForecastRepositoryImpl(
     private val currentWeatherDao: CurrentWeatherDao,
     private val weatherNetworkDataSource: WeatherNetworkDataSource
+
 ) : ForecastRepository {
 
     init {
@@ -41,7 +47,8 @@ class ForecastRepositoryImpl(
     }
 
     private suspend fun initWeatherData() {
-        if (isFetchCurrentNeeded(ZonedDateTime.now().minusHours(1)))
+
+        if (isFetchCurrentNeeded(LocalTime.now().minusHours(1)))
             fetchCurrentWeather()
     }
 
@@ -52,8 +59,8 @@ class ForecastRepositoryImpl(
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun isFetchCurrentNeeded(lastFetchTime: ZonedDateTime): Boolean {
-        val thirtyMinutesAgo = ZonedDateTime.now().minusMinutes(30)
+    private fun isFetchCurrentNeeded(lastFetchTime: LocalTime): Boolean {
+        val thirtyMinutesAgo = LocalTime.now().minusMinutes(30)
         return lastFetchTime.isBefore(thirtyMinutesAgo)
     }
 }

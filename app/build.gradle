@@ -96,4 +96,7 @@ dependencies {
 
     // New Material Design
     implementation 'com.google.android.material:material:1.1.0-alpha10'
+
+    // Better dateTime-time support
+    implementation "com.jakewharton.threetenabp:threetenabp:1.1.0"
 }
