@@ -25,7 +25,7 @@ interface apiservice {
 
     ): Deferred<currentWeatherResponse>
     companion object {
-        operator fun invoke(): apiservice {
+        operator fun invoke(connectivityInterceptor: ConnectivityInterceptor): apiservice {
 
             val requestInterceptor = Interceptor { chain ->
 
@@ -44,6 +44,7 @@ interface apiservice {
 
             val okHttpClient = OkHttpClient.Builder()
                 .addInterceptor(requestInterceptor)
+                .addInterceptor(connectivityInterceptor)
                 .build()
 
             return Retrofit.Builder()
