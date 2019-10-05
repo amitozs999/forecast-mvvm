@@ -21,6 +21,8 @@ interface apiservice {
 
         @Query("query") location:String
 
+
+
     ): Deferred<currentWeatherResponse>
     companion object {
         operator fun invoke(): apiservice {
