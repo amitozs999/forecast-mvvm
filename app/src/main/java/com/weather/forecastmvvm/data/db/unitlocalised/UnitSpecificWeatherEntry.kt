@@ -9,7 +9,7 @@ interface UnitSpecificCurrentWeatherEntry {
 //   val weatherDescriptions: List<String>
 //
 //   val weatherIcons: String
-
+val windDir: String
     val windSpeed: Int
 //    val windDirection: String
     val precip: Double

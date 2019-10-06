@@ -13,8 +13,8 @@ data class ImperialWeatherEntry(
 //    override val weatherCode: Int,
      @ColumnInfo(name = "windSpeed")
     override val windSpeed: Int,
-//    @ColumnInfo(name = "windDir")
-//    override val windDirection: String,
+    @ColumnInfo(name = "windDir")
+    override val  windDir: String,
     @ColumnInfo(name = "precip")
     override val precip: Double,
       @ColumnInfo(name = "feelslike")

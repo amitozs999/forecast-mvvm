@@ -54,14 +54,13 @@
                 android:orientation="horizontal">
 
             <TextView
-                    android:id="@+id/tv11"
+                    android:id="@+id/textView_temp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:layout_marginStart="25dp"
                     android:layout_marginEnd="8dp"
                     android:fontFamily="sans-serif"
-                    android:text="25.0°C"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
                     android:textColor="#5b39c6"
                     android:textSize="60sp"
@@ -109,7 +108,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="invisible" />
+            tools:visibility="visible" />
 
     <TextView
             android:id="@+id/textView_loading"
@@ -172,8 +171,8 @@
 
                 <ImageView
                         android:id="@+id/imageView_wind0"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="35dp"
                         android:layout_marginStart="60dp"
                         android:layout_marginTop="14dp"
                         android:layout_marginEnd="40dp"
@@ -188,10 +187,10 @@
                         android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
+                        android:layout_marginLeft="40dp"
                         android:layout_marginTop="45dp"
                         android:layout_marginBottom="8dp"
-                        android:text="Wind"
+                        android:text="Precipitation"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                         android:textColor="@android:color/white"
                         android:textSize="13sp"
@@ -200,7 +199,7 @@
                 </TextView>
 
                 <TextView
-                        android:id="@+id/tv001"
+                        android:id="@+id/textView_precip"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
@@ -210,7 +209,6 @@
 
                         android:layout_marginBottom="15dp"
                         android:alpha="0.8"
-                        android:text="1m/sec"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                         android:textColor="@android:color/white"
                         android:textSize="17sp"
@@ -253,10 +251,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:layout_marginLeft="60dp"
+                        android:layout_marginLeft="45dp"
                         android:layout_marginTop="45dp"
                         android:layout_marginBottom="8dp"
-                        android:text="Wind"
+                        android:text="Feels Like"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                         android:textColor="@android:color/white"
                         android:textSize="13sp"
@@ -265,7 +263,7 @@
                 </TextView>
 
                 <TextView
-                        android:id="@+id/tv002"
+                        android:id="@+id/textView_feelslike"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
@@ -275,7 +273,7 @@
 
                         android:layout_marginBottom="15dp"
                         android:alpha="0.8"
-                        android:text="1m/sec"
+                        android:text="  "
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                         android:textColor="@android:color/white"
                         android:textSize="17sp"
@@ -317,7 +315,8 @@
                         android:layout_marginEnd="40dp"
                         android:layout_marginBottom="8dp"
                         android:contentDescription="bb"
-                        android:src="@mipmap/ic_launcher"
+                        android:background="@drawable/windicon"
+
                         app:layout_constraintWidth_percent="0.25"
                         tools:tint="#f9a920" />
 
@@ -338,21 +337,36 @@
                 </TextView>
 
                 <TextView
-                        android:id="@+id/tv003"
+                        android:id="@+id/textView_winddir"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
-                        android:layout_marginStart="45dp"
+                        android:layout_marginStart="26dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="15dp"
 
                         android:layout_marginBottom="15dp"
                         android:alpha="0.8"
-                        android:text="1m/sec"
+                        android:text="66."
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                         android:textColor="@android:color/white"
-                        android:textSize="17sp"
-                       />
+                        android:textSize="17sp" />
+
+                <TextView
+                        android:id="@+id/textView_wind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+
+                        android:layout_marginBottom="15dp"
+                        android:alpha="0.8"
+                        android:text="66."
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -390,10 +404,10 @@
                         android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
+                        android:layout_marginLeft="50dp"
                         android:layout_marginTop="45dp"
                         android:layout_marginBottom="8dp"
-                        android:text="Wind"
+                        android:text="Visibility"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                         android:textColor="@android:color/white"
                         android:textSize="13sp"
@@ -402,7 +416,7 @@
                 </TextView>
 
                 <TextView
-                        android:id="@+id/tv004"
+                        android:id="@+id/textView_visibility"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
@@ -412,7 +426,6 @@
 
                         android:layout_marginBottom="15dp"
                         android:alpha="0.8"
-                        android:text="1m/sec"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                         android:textColor="@android:color/white"
                         android:textSize="17sp" />

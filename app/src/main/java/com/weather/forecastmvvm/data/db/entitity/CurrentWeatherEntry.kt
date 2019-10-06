@@ -93,8 +93,8 @@ data class CurrentWeatherEntry(
 //    val weatherIcons: List<String>,
 //    @SerializedName("wind_degree")
 //    val windDegree: Double,
-//    @SerializedName("wind_dir")
-//    val windDir: String,
+    @SerializedName("wind_dir")
+    val windDir: String,
      @SerializedName("wind_speed")
     val windSpeed: Int
 ) {
