@@ -8,11 +8,13 @@ import androidx.room.TypeConverters
 
 import com.weather.forecastmvvm.data.db.entitity.CurrentWeatherEntry
 
+
 @Database(
     entities = [CurrentWeatherEntry::class],
-    version = 1
+    version = 2
 )
 //@TypeConverters({ Converters.class})
+//@TypeConverters(DescriptionConverter::class)
 abstract class ForecastDatabase : RoomDatabase() {
     abstract fun currentWeatherDao(): CurrentWeatherDao
 

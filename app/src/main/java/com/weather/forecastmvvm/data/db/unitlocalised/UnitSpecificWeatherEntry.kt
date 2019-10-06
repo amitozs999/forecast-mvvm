@@ -3,16 +3,16 @@ package com.weather.forecastmvvm.data.db.unitlocalised
 import com.google.gson.annotations.SerializedName
 
 interface UnitSpecificCurrentWeatherEntry {
-//    val temperature: Double
+    val temperature: Double
 //    val weatherCode: Int
 //
-//    val weatherDescriptions: String
+//   val weatherDescriptions: List<String>
 //
-//    val weatherIcons: String
+//   val weatherIcons: String
 
     val windSpeed: Int
 //    val windDirection: String
-//    val precipitationVolume: Double
+    val precip: Double
     val feelslike: Int
-//    val visibilityDistance: Double
+    val visibility: Double
 }
